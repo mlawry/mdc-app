@@ -1,3 +1,5 @@
+var CopyWebpackPlugin = require('copy-webpack-plugin');
+
 module.exports = [
   {
     entry: './app/index.js',
@@ -5,6 +7,7 @@ module.exports = [
     mode: "development",
     module: {
       rules: [{
+        exclude: /(js-file-download|xml-but-prettier)/,
         use: [
           {
             loader: 'babel-loader',
@@ -18,7 +21,12 @@ module.exports = [
     output: {
       filename: 'index_bundle.js',
       path: __dirname + '/dist'
-    }
+    },
+    plugins: [
+      new CopyWebpackPlugin([
+        { from: 'node_modules/swagger-ui/dist/swagger-ui.css', to: 'swagger-ui.css' }
+      ]),
+    ],
   },
   {
     entry: './app/index.scss',
