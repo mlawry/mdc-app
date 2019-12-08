@@ -1,6 +1,7 @@
 import jQuery from 'jquery';
 import {MDCRipple} from '@material/ripple';
 import {MDCTextField} from '@material/textfield';
+import SwaggerUI from 'swagger-ui';
 
 jQuery(document).ready(function () {
     
@@ -13,5 +14,9 @@ jQuery(document).ready(function () {
         const textField = new MDCTextField(elem);
     });
     
+    SwaggerUI({
+        dom_id: '#mySwaggerUIDomId',
+        url: 'openapi.txt'
+    });
 });
 
