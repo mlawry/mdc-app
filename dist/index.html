@@ -4,22 +4,31 @@
         <link rel="stylesheet" href="index_bundle.css">
     </head>
     <body>
-        <div class="mdc-text-field mdc-text-field--outlined">
-            <input type="text" id="tf-outlined" class="mdc-text-field__input">
-            <div class="mdc-notched-outline">
-                <div class="mdc-notched-outline__leading">
+        <div class="container">
+            <div class="row">
+                <!-- One of two small columns. -->
+                <div class="col-sm">
+                    <div class="mdc-text-field mdc-text-field--outlined">
+                        <input type="text" id="tf-outlined" class="mdc-text-field__input">
+                        <div class="mdc-notched-outline">
+                            <div class="mdc-notched-outline__leading">
+                            </div>
+                            <div class="mdc-notched-outline__notch">
+                                <label for="tf-outlined" class="mdc-floating-label">Your Name</label>
+                            </div>
+                            <div class="mdc-notched-outline__trailing">
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="mdc-notched-outline__notch">
-                    <label for="tf-outlined" class="mdc-floating-label">Your Name</label>
-                </div>
-                <div class="mdc-notched-outline__trailing">
+                <!-- Two of two small columns. -->
+                <div class="col-sm">
+                    <button class="mdc-button mdc-button--outlined">
+                        <span class="mdc-button__label">Checkout</span>
+                    </button>
                 </div>
             </div>
-        </div>
-        <button class="mdc-button mdc-button--outlined">
-            <span class="mdc-button__label">Checkout</span>
-        </button>
-        
+        </div>        
         <script type="text/javascript" src="index_bundle.js"></script>
     </body>
 </html>

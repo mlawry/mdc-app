@@ -1,6 +1,7 @@
 import jQuery from 'jquery';
 import {MDCRipple} from '@material/ripple';
 import {MDCTextField} from '@material/textfield';
+import 'bootstrap';
 
 jQuery(document).ready(function () {
     
